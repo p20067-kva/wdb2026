@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+.container {
+    /* コンテナの幅をウィンドウの90%にする*/
+    width: 90%;
+    /* 左右外余白をautoにする*/
+    margin: 0 auto;
+}
+
+header{
+    padding:2em 0;
+}
+header img {
+    /* ■■ ヘッダーの画像を親の幅100%にする*/
+    width: 100%;
+}
+
+nav.menu_flex { /*メニューを最上部に固定*/
+/* 
+    position: fixed;
+    width: 90%;
+    top: 0; 
+*/
+
+}
+nav.menu_flex ul {
+    /* ■■ メニュー全体をflex対応にする（箇条書きの外枠）*/
+    display: flex;
+}
+nav.menu_flex ul li {
+    /* ■■ 各メニューを1対1対1...にする（箇条書きのアイテム）*/
+}
+
+nav.menu_flex ul li a { /*メニューアイテムの設定*/
+    background-color: white;
+    color: gray;
+    display: block; /* 文字以外の場所もクリック可能にする*/
+    text-align: center; /* 文字を中央にする */
+    height: 2em;
+    line-height: 2em;
+    text-decoration: none; /* 下線を消す */
+
+    /* ■■ 各メニューの左にボーダーライン*/
+    border-left: solid 1px orangered;
+}
+nav.menu_flex ul li:last-child a{
+    /* ■■ 最後のメニューの右にボーダーライン*/
+    border-right: solid 1px orangered;
+}
+
+h2 {
+    margin: 1em 0;
+    padding: 0.3em 1em;
+    font-size: 1.2em;
+    border-left: 1em solid darkorange;
+    border-bottom: 3px solid darkorange;
+}
+
+.petInfo{
+    /* ■■ floatをキャンセル*/
+    clear: both;
+
+    /* ■■ コンテンツの高さがおかしい時の処理 */
+    overflow: hidden;
+
+
+    background-color: navajowhite;
+    padding: 1em;
+    margin: 1em 0;
+
+    /* ■■ おすすめを配置する際のベースposition決定 */
+
+
+}
+
+.petInfo img{
+    /* ■■ 左よせ*/
+    float: left;
+    padding: 0 1em;
+    border-radius: 50%;
+}
+.recommend {
+  /* ■■ 親要素の位置からの絶対位置position*/
+  /* ■■ 上から5pxの位置*/
+  /* ■■ 右から5pxの位置*/
+  padding: 0.5em;
+  background-color: #FF0;
+}
+
+footer {
+  /* ■■ floatをキャンセル*/
+  clear: both;
+  background-color: #f88222;
+  line-height: 2em;
+  text-align: center;
+  color: #FFF;
+}
